@@ -24,8 +24,33 @@ fun Collection(){
     println(shapesLocked)
 }
 
-// Set adalah kumpulan data yang tidak memiliki posisi atau urutan tertentu dan ahnya mnyimpan data unik( tidak ada duplikasi)
+// Set adalah kumpulan data yang tidak memiliki posisi atau urutan tertentu dan ahnya mnyimpan data unik (tidak ada duplikasi)
 // Set bersifat unordered, artinya data yang dimasukkan tidak memiliki posisi tertentu
 // Set bersifat mutable dan read only, artinya data yang dimasukkan dapat diubah dan tidak dapat diubah
 // Set read only menggunakan setOf
 // Set mutable menggunakan mutableSetOf
+
+fun ContohSet() {
+    println()
+    println("=== Set ===")
+
+    //Set Read-Only
+    val readOnlyAbjad = setOf("A", "B", "C")
+    println(readOnlyAbjad)
+
+    //set mutable\
+    val shape: MutableSet<String> = mutableSetOf("Circle", "Square" , "Triangle")
+    println(shape)
+
+    //Menambahkan data dalam set mutable
+    shape.add("Rectangle")
+    println(shape)
+
+    //menghapus data dari set mutable
+    shape.remove("Circle")
+    println(shape)
+
+    //Set read-only
+    val shapesLocked: Set<String> = shape
+    println(shapesLocked)
+}
